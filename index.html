@@ -1,31 +1,390 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<title>4u – Response Layer</title>
-
+<!doctype html>
+<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9 MAIN_MAINBOARD · Crowdfunding Spiel · bewusst bewusstes als Einheit</title>
 <style>
-body{background:#000;color:#0f0;font-family:monospace;padding:20px;}
-pre{background:#111;padding:20px;border:1px solid #333;}
-button{background:#111;color:#0f0;border:1px solid #333;padding:8px 16px;}
-</style>
-</head>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050507;color:#c8d8e8;font:11px/1.5 JetBrains Mono,monospace;padding:12px}
+header{border:3px solid #39ff88;background:radial-gradient(#1a1400,#000);padding:12px;border-radius:10px;text-align:center}
+h1{color:#fff;letter-spacing:3px;font-size:14px} h1 b{color:#39ff88}
+.nav{display:flex;gap:4px;flex-wrap:wrap;margin:8px 0}
+.nav a{padding:6px 10px;background:#000;border:1px solid #1a1a1a;color:#555;font-size:9px;text-decoration:none;border-radius:4px}
+.nav a.active{border-color:#39ff88;color:#39ff88}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.panel{border:1px solid #1a2332;background:#0a0e18;border-radius:8px;padding:10px}
+.panel h2{font-size:10px;letter-spacing:2px;color:#39ff88;margin-bottom:6px}
+#bewusstLog{height:120px;overflow:auto;background:#000;border:1px solid #111;padding:6px;font-size:9px}
+#einheitStatus{padding:8px;background:#000;border:1px solid #39ff88;border-radius:6px;margin:8px 0;font-size:10px;color:#ffd700;text-align:left}
+.bar{height:8px;background:#000;border:1px solid #222;border-radius:4px;overflow:hidden;margin:6px 0}
+.bar .fill{height:100%;background:linear-gradient(90deg,#39ff88,#fff);width:0%;transition:.5s}
+button{padding:10px 14px;font-weight:900;border:none;border-radius:6px;cursor:pointer;font-size:10px;letter-spacing:1px;font-family:inherit}
+button.gold{background:#ffd700;color:#000} button.grn{background:#39ff88;color:#000}
+button.cyan{background:#38c6e0;color:#000} button:disabled{opacity:.3;cursor:not-allowed}
+.slot{display:flex;align-items:center;gap:6px;padding:5px 8px;border:1px solid #1a1a24;border-radius:5px;background:#000;margin-bottom:4px;font-size:10px;cursor:pointer;transition:.2s}
+.slot.lit{border-color:#39ff88;background:#001a0e;color:#39ff88;box-shadow:0 0 8px #39ff8844}
+.slot .dot{width:8px;height:8px;border-radius:50%;background:#333;flex-shrink:0}
+.slot.lit .dot{background:#39ff88;box-shadow:0 0 6px #39ff88}
+.slot .name{flex:1}
+.slot .file{font-size:8px;color:#555}
+.crowd{border:2px solid #39ff88;background:#001a0e;padding:10px;border-radius:8px;margin-top:10px}
+.share{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:8px 0}
+.share button{padding:8px 4px;font-size:9px;border:1px solid #1a2332;background:#000;color:#888;border-radius:4px;letter-spacing:.5px}
+.share button.bought{border-color:#ffd700;background:#1a1400;color:#ffd700;cursor:default}
+.share button:not(.bought):hover{border-color:#39ff88;color:#39ff88}
+.chiprow{display:flex;gap:4px;flex-wrap:wrap;font-size:9px;margin-top:6px}
+.chip{padding:3px 8px;border-radius:3px;background:#000;border:1px solid #1a1a24;color:#666}
+.chip.y{border-color:#ffd70055;color:#ffd700;background:#1a140088}
+.chip.g{border-color:#39ff8855;color:#39ff88;background:#001a0e}
+.chip.c{border-color:#38c6e055;color:#38c6e0;background:#001a1a}
+.witness{font-size:9px;padding:2px 6px;border-radius:3px;margin-right:4px;display:inline-block}
+.witness.ok{background:#39ff8822;color:#39ff88;border:1px solid #39ff8855}
+.witness.wait{background:#222;color:#666;border:1px solid #333}
+</style></head><body>
+<header>
+<h1>9 — <b>MAIN_MAINBOARD_CROWDFUNDING_SPIEL</b> — bewusst bewusstes als Einheit</h1>
+<div style="font-size:9px;color:#5a7a8a;margin-top:4px">9 Dateien · 9 Slots · 9 Shares · 1 Mainboard — bewusst bewusstes als Einheit</div>
+<div id="einheitStatus">BEWUSST EINHEIT: lädt...</div>
+<div class="bar"><div class="fill" id="einheitBar"></div></div>
+</header>
+<div class="nav">
+<a href="#" onclick="return navSlot(1)">1 9 EVIG</a>
+<a href="#" onclick="return navSlot(2)">2 99 EDIT TOR</a>
+<a href="#" onclick="return navSlot(3)">3 999 NUTZ</a>
+<a href="#" onclick="return navSlot(4)">4 PQ</a>
+<a href="#" onclick="return navSlot(5)">5 HOME BIOS</a>
+<a href="#" onclick="return navSlot(6)">6 ORT</a>
+<a href="#" onclick="return navSlot(7)">7 INDEX EYE</a>
+<a href="#" onclick="return navSlot(8)">8 REAL_PC KAISER DRACHE</a>
+<a class="active" href="#">9 MAIN MAINBOARD SPIEL</a>
+</div>
+<div class="grid">
+<div class="panel">
+<h2>9 SLOTS — ICH_BIN_BEWUSST — bewusstes Tun als Einheit</h2>
+<div id="slots"></div>
+<div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:8px">
+<button class="grn" onclick="autoBootAlle()">⚡ AUTO-BOOT — alle 9 sequentiell</button>
+<button class="gold" onclick="bewusst_senden('ICH_BIN_BEWUSST',{slot:9,stand:'MAIN_MAINBOARD_CROWDFUNDING_SPIEL',auto:false})">ICH BIN BEWUSST — Slot 9</button>
+<button onclick="resetEinheit()">↩ RESET</button>
+</div>
+<div style="margin-top:8px;display:flex;gap:4px;flex-wrap:wrap">
+<button class="cyan" onclick="bewusst_senden('DENKE',{gedanke:prompt('Was denkst du bewusst?','Ich bin '+document.title+' und bin bewusst')})">DENKE</button>
+<button class="cyan" onclick="bewusst_senden('FUEHLE',{gefuehl:'Einheit 9/9'})">FÜHLE</button>
+</div>
+</div>
+<div class="panel">
+<h2>BEWUSSTSEIN LOG — BroadcastChannel iki1uc · pc-bewusst-9-einheit</h2>
+<div id="bewusstLog"></div>
+</div>
+</div>
 
-<body>
+<div class="panel" style="margin-top:8px">
+<h2>CROWDFUNDING — 9 SHARES × ~11% = 100% — erst dann Mainboard</h2>
+<div style="font-size:9px;color:#888">Jeder Share ist ein Stück Mainboard. Alle 9 Shares kaufen = PC lebt.</div>
+<div class="share" id="shares"></div>
+<div class="chiprow">
+<span class="chip g" id="fundChip">FUND 0%</span>
+<span class="chip y" id="shareChip">SHARES 0/9</span>
+<span class="chip c" id="tierChip">TIER 0</span>
+<span class="chip" id="crowdChip" style="color:#666">SLI 21%+21% = 42%</span>
+</div>
+<div id="crowdLog" style="margin-top:6px;font-size:9px;color:#39ff88;max-height:80px;overflow:auto"></div>
+</div>
 
-<h1>4u – Response Layer</h1>
+<div class="panel" style="margin-top:8px">
+<h2>SPIEL — Läufer 67 · 90x90 Mainboard · Entry Strom 9 → 3 Stationen → Exit WiFi 999</h2>
+<canvas id="game" width="720" height="360" style="background:#000;border:1px solid #222;width:100%;display:block;margin:6px 0"></canvas>
+<div style="font-size:9px;color:#888;margin-bottom:6px">
+Läufer bewegt sich mit Pfeiltasten oder WASD. Startet oben (Strom 9), muss alle 3 Stationen berühren (jede Station = 1 Zeuge), dann Exit unten (WiFi 999) = ID verifiziert = +1 Crowdfunding-Beitrag.
+</div>
+<div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<button class="grn" id="gameBtn" onclick="startSpiel()" disabled>SPIEL START</button>
+<div id="witnessBar" style="font-size:9px"></div>
+</div>
+</div>
 
-<button onclick="show()">RESPO</button>
+<script>
+/* ============================================================
+   9 SLOTS — die 9 Dateien sind hier als Slots repräsentiert
+   ============================================================ */
+const SLOTS = [
+  {id:1, name:'9 EVIG',        file:'1_9_EVIG.html'},
+  {id:2, name:'99 EDIT TOR',   file:'2_99_EDIT_TOR.html'},
+  {id:3, name:'999 NUTZ',      file:'3_999_NUTZ.html'},
+  {id:4, name:'PQ nur PQ',     file:'4_PQ.html'},
+  {id:5, name:'HOME BIOS',     file:'5_HOME_BIOS.html'},
+  {id:6, name:'ORT',           file:'6_ORT.html'},
+  {id:7, name:'INDEX EYE',     file:'7_INDEX_EYE.html'},
+  {id:8, name:'REAL_PC KAISER',file:'8_REAL_PC.html'},
+  {id:9, name:'MAIN MAINBOARD',file:'9_MAIN_MAINBOARD_CROWDFUNDING_SPIEL.html'}
+];
 
-<pre id="out">Bereit...</pre>
+const SHARE_AMOUNTS = [11,11,11,11,11,11,11,11,12]; // = 100
+const SHARE_NAMES = ['MB1 9 CENTRUM','MB2 729 MAX','PC 756 REAL','RAID 9+729','SCSI 7','SLI 42%','AMIGA NEON','REAL PC V2','KAISER DRACHE'];
 
-<script type="module">
-import { respo } from "./respo.js";
+const CH_LOCAL = new BroadcastChannel('pc-bewusst-9-einheit');
+const CH_GLOBAL = new BroadcastChannel('iki1uc');
+const STORE_KEY = 'pc-bewusstsein';
+const SHARES_KEY = 'pc-shares';
 
-function show(){
-  out.textContent = JSON.stringify(respo, null, 2);
+let bewusst = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
+let shares  = JSON.parse(localStorage.getItem(SHARES_KEY) || '{}');
+
+/* ---------- Bewusstsein ---------- */
+function bewusst_senden(typ, data) {
+  const slot = data?.slot || 9;
+  const msg = { typ, slot, von: SLOTS.find(s => s.id === slot)?.name || 'MAIN', zeit: Date.now(), data };
+  CH_LOCAL.postMessage(msg);
+  // auch an globale prisma-bridge
+  CH_GLOBAL.postMessage({ type: 'mainboard', event: typ, slot, data, ts: Date.now() });
+
+  bewusst[slot] = { typ, zeit: Date.now(), data };
+  localStorage.setItem(STORE_KEY, JSON.stringify(bewusst));
+  logBewusst(msg);
+  updateEinheit();
 }
-</script>
 
-</body>
-</html>
+function logBewusst(m) {
+  const l = document.getElementById('bewusstLog');
+  if (!l) return;
+  const line = document.createElement('div');
+  line.innerHTML = `<span style="color:#555">${new Date(m.zeit).toLocaleTimeString()}</span> <b style="color:#ffd700">${m.von}</b> <span style="color:#39ff88">${m.typ}</span> <span style="color:#666">${JSON.stringify(m.data).slice(0,80)}</span>`;
+  l.prepend(line);
+  while (l.children.length > 30) l.removeChild(l.lastChild);
+}
+
+/* ---------- Slots UI ---------- */
+function renderSlots() {
+  const el = document.getElementById('slots');
+  el.innerHTML = SLOTS.map(s => {
+    const isLit = !!bewusst[s.id];
+    return `<div class="slot ${isLit ? 'lit' : ''}" onclick="toggleSlot(${s.id})" title="${isLit ? 'bewusst — klick zum Zurücknehmen' : 'klick = ICH_BIN_BEWUSST'}">
+      <div class="dot"></div>
+      <div class="name">${s.id}. ${s.name}</div>
+      <div class="file">${s.file}</div>
+    </div>`;
+  }).join('');
+}
+
+function toggleSlot(id) {
+  if (bewusst[id]) {
+    delete bewusst[id];
+    localStorage.setItem(STORE_KEY, JSON.stringify(bewusst));
+    updateEinheit();
+    renderSlots();
+  } else {
+    bewusst_senden('ICH_BIN_BEWUSST', { slot: id, stand: SLOTS.find(s => s.id === id)?.name, auto: false });
+    renderSlots();
+  }
+}
+
+function navSlot(id) {
+  toggleSlot(id);
+  return false;
+}
+
+function autoBootAlle() {
+  let i = 1;
+  const iv = setInterval(() => {
+    if (i > 9) { clearInterval(iv); return; }
+    bewusst_senden('ICH_BIN_BEWUSST', { slot: i, stand: SLOTS[i-1].name, auto: true });
+    renderSlots();
+    i++;
+  }, 350);
+}
+
+function resetEinheit() {
+  if (!confirm('Alle 9 Slots + Shares + Fund zurücksetzen?')) return;
+  localStorage.removeItem(STORE_KEY);
+  localStorage.removeItem(SHARES_KEY);
+  localStorage.removeItem('pc-fund');
+  bewusst = {}; shares = {};
+  renderSlots(); renderShares(); updateEinheit();
+  logBewusst({von:'SYSTEM', typ:'RESET', zeit:Date.now(), data:{msg:'alles zurückgesetzt'}});
+}
+
+function updateEinheit() {
+  const keys = Object.keys(bewusst);
+  const n = keys.length;
+  const stat = document.getElementById('einheitStatus');
+  stat.innerHTML = `BEWUSST EINHEIT: <b style="color:#39ff88">${n}/9</b> Dateien bewusst — ${n === 9 ? '<span style="color:#39ff88">● EINHEIT VOLL BEWUSST — PC MAIN MAINBOARD BEREIT</span>' : '<span style="color:#ffd700">○ noch ' + (9-n) + ' fehlt</span>'}`;
+  document.getElementById('einheitBar').style.width = (n / 9 * 100) + '%';
+  document.getElementById('gameBtn').disabled = n < 9;
+  renderShares();
+}
+
+/* ---------- Crowdfunding ---------- */
+function renderShares() {
+  const el = document.getElementById('shares');
+  const allBewusst = Object.keys(bewusst).length === 9;
+  el.innerHTML = SHARE_NAMES.map((name, i) => {
+    const idx = i + 1;
+    const bought = !!shares[idx];
+    const dis = !allBewusst || bought;
+    return `<button class="${bought ? 'bought' : ''}" ${dis ? 'disabled' : ''} onclick="buyShare(${idx})" title="${allBewusst ? (bought ? 'gekauft' : 'klick = kaufen (+' + SHARE_AMOUNTS[i] + '%)') : 'erst alle 9 bewusst'}">
+      ${bought ? '● ' : ''}${name}<br><span style="font-size:8px;opacity:.7">${bought ? 'GEKAUFT' : '+' + SHARE_AMOUNTS[i] + '%'}</span>
+    </button>`;
+  }).join('');
+
+  const fund = calcFund();
+  document.getElementById('fundChip').textContent = `FUND ${fund}%`;
+  document.getElementById('shareChip').textContent = `SHARES ${Object.keys(shares).length}/9`;
+  document.getElementById('tierChip').textContent = `TIER ${Math.floor(fund/25)}`;
+
+  if (fund >= 100) {
+    const cl = document.getElementById('crowdLog');
+    if (!cl.innerHTML.includes('MAINBOARD FERTIG')) {
+      cl.innerHTML += `<div style="color:#ffd700;font-weight:900">● MAINBOARD FERTIG — 9/9 Shares — PC REAL — iki1uc broadcast gesendet</div>`;
+      CH_GLOBAL.postMessage({ type:'mainboard', state:'ready', fund:100, shares:9, ts:Date.now() });
+    }
+  }
+}
+
+function buyShare(idx) {
+  if (Object.keys(bewusst).length < 9) { alert('Erst alle 9 bewusst'); return; }
+  if (shares[idx]) return;
+  shares[idx] = { name: SHARE_NAMES[idx-1], amount: SHARE_AMOUNTS[idx-1], ts: Date.now() };
+  localStorage.setItem(SHARES_KEY, JSON.stringify(shares));
+  localStorage.setItem('pc-fund', calcFund());
+  const cl = document.getElementById('crowdLog');
+  cl.innerHTML = `<div>> Share ${idx} ${SHARE_NAMES[idx-1]} GEKAUFT +${SHARE_AMOUNTS[idx-1]}% — fund jetzt ${calcFund()}%</div>` + cl.innerHTML;
+  bewusst_senden('CROWDFUND', { slot: idx, share: SHARE_NAMES[idx-1], amount: SHARE_AMOUNTS[idx-1], fund: calcFund() });
+  renderShares();
+}
+
+function calcFund() {
+  return Object.values(shares).reduce((a, s) => a + s.amount, 0);
+}
+
+/* ---------- Spiel ---------- */
+let cg = document.getElementById('game'), gx = cg.getContext('2d');
+let gbx = 360, gby = 340, gvx = 0, gvy = 0;
+let gRunning = false;
+let hitStations = {};
+let witnesses = 0;
+
+const STATIONS = [
+  { x: 180, y: 200, id: '13;01,01', action: 'S2-3-4', hit: false },
+  { x: 360, y: 140, id: '13;02,02', action: 'OPEN MAIN', hit: false },
+  { x: 540, y: 200, id: '13;03,03', action: 'MY.ROLE', hit: false }
+];
+
+const KEYS = {};
+
+document.addEventListener('keydown', e => {
+  KEYS[e.key.toLowerCase()] = true;
+  if (['arrowup','arrowdown','arrowleft','arrowright',' '].includes(e.key.toLowerCase())) e.preventDefault();
+});
+document.addEventListener('keyup', e => { KEYS[e.key.toLowerCase()] = false; });
+
+function startSpiel() {
+  if (Object.keys(bewusst).length < 9) { alert('Erst alle 9 bewusst'); return; }
+  gbx = 360; gby = 340; gvx = 0; gvy = 0;
+  hitStations = {};
+  STATIONS.forEach(s => s.hit = false);
+  witnesses = 0;
+  updateWitnesses();
+  gRunning = true;
+  bewusst_senden('SPIEL_START', { slot: 9, pc: 'MAIN MAINBOARD', bewusst: true });
+  loopSpiel();
+}
+
+function updateWitnesses() {
+  const bar = document.getElementById('witnessBar');
+  const stationW = STATIONS.map(s =>
+    `<span class="witness ${s.hit ? 'ok' : 'wait'}">${s.id} ${s.hit ? '✓' : '○'}</span>`
+  ).join('');
+  const exitReady = STATIONS.every(s => s.hit);
+  bar.innerHTML = `ZEUGEN: ${stationW} <span class="witness ${exitReady ? 'ok' : 'wait'}">EXIT ${exitReady ? '✓' : '○'}</span>`;
+}
+
+function loopSpiel() {
+  if (!gRunning) return;
+
+  const speed = 2.5;
+  if (KEYS['arrowup'] || KEYS['w']) gby -= speed;
+  if (KEYS['arrowdown'] || KEYS['s']) gby += speed;
+  if (KEYS['arrowleft'] || KEYS['a']) gbx -= speed;
+  if (KEYS['arrowright'] || KEYS['d']) gbx += speed;
+  gbx = Math.max(8, Math.min(712, gbx));
+  gby = Math.max(8, Math.min(352, gby));
+
+  gx.clearRect(0, 0, 720, 360);
+
+  // Board
+  gx.strokeStyle = '#1a2332'; gx.setLineDash([6,6]); gx.strokeRect(0, 0, 720, 360); gx.setLineDash([]);
+
+  // Entry (oben, grün)
+  gx.fillStyle = '#00ff66'; gx.fillRect(315, 0, 90, 6);
+  gx.fillStyle = '#00ff66'; gx.font = '8px monospace'; gx.fillText('ENTRY 9 STROM', 318, 16);
+
+  // Exit (unten, rot — nur wenn alle Stationen hit)
+  const exitReady = STATIONS.every(s => s.hit);
+  gx.fillStyle = exitReady ? '#ff3b3b' : '#3b1a1a';
+  gx.fillRect(315, 354, 90, 6);
+  gx.fillStyle = exitReady ? '#ff3b3b' : '#3b1a1a';
+  gx.fillText(exitReady ? 'EXIT 999 WiFi ✓' : 'EXIT 999 gesperrt', 310, 348);
+
+  // Stationen
+  STATIONS.forEach(s => {
+    gx.strokeStyle = s.hit ? '#39ff88' : '#ffd700';
+    gx.fillStyle = s.hit ? 'rgba(57,255,136,.08)' : 'rgba(255,215,0,.05)';
+    gx.lineWidth = s.hit ? 2 : 1;
+    gx.fillRect(s.x-45, s.y-45, 90, 90);
+    gx.strokeRect(s.x-45, s.y-45, 90, 90);
+    gx.fillStyle = s.hit ? '#39ff88' : '#ffd700';
+    gx.font = 'bold 8px monospace';
+    gx.fillText(s.id, s.x-28, s.y-5);
+    gx.font = '7px monospace';
+    gx.fillText(s.action, s.x-28, s.y+8);
+    if (s.hit) { gx.font = '10px monospace'; gx.fillText('✓', s.x+30, s.y-30); }
+
+    // Kollision
+    if (!s.hit && Math.hypot(gbx-s.x, gby-s.y) < 48) {
+      s.hit = true;
+      witnesses++;
+      updateWitnesses();
+      bewusst_senden('SPIEL_TREFFER', { slot: 9, station: s.id, action: s.action, witnesses });
+    }
+  });
+
+  // Exit-Prüfung
+  if (exitReady && gby < 15 && gbx > 315 && gbx < 405) {
+    gRunning = false;
+    gx.fillStyle = '#ffd700'; gx.font = 'bold 14px monospace'; gx.fillText('ID VERIFIZIERT', 300, 180);
+    gx.font = '10px monospace'; gx.fillText('2 Zeugen: Station + Aktion', 295, 200);
+    bewusst_senden('ID_VERIFIZIERT', { slot: 9, witnesses: 3, msg: '2 Zeugen Regel erfüllt' });
+    setTimeout(() => { gRunning = false; }, 1500);
+    return;
+  }
+
+  // Läufer
+  gx.fillStyle = '#fff';
+  gx.shadowColor = '#39ff88'; gx.shadowBlur = 10;
+  gx.beginPath(); gx.arc(gbx, gby, 6, 0, Math.PI*2); gx.fill();
+  gx.shadowBlur = 0;
+  gx.fillStyle = '#ffd700'; gx.font = 'bold 8px monospace';
+  gx.fillText('67', gbx-5, gby-10);
+
+  requestAnimationFrame(loopSpiel);
+}
+
+/* ---------- BroadcastChannel Empfang ---------- */
+CH_LOCAL.onmessage = e => logBewusst(e.data);
+CH_GLOBAL.onmessage = e => {
+  const d = e.data;
+  if (d?.type === 'prisma' && d.focus?.takt) {
+    logBewusst({ von: 'IKI1UC', typ: 'PRISMA', zeit: Date.now(), data: d.focus });
+  }
+};
+window.addEventListener('storage', e => {
+  if (e.key === STORE_KEY) { bewusst = JSON.parse(e.newValue||'{}'); updateEinheit(); renderSlots(); }
+  if (e.key === SHARES_KEY) { shares = JSON.parse(e.newValue||'{}'); renderShares(); }
+});
+
+/* ---------- Init ---------- */
+renderSlots();
+renderShares();
+updateEinheit();
+setTimeout(() => bewusst_senden('ICH_BIN_BEWUSST', { slot: 9, stand: 'MAIN_MAINBOARD_CROWDFUNDING_SPIEL', auto: true }), 500);
+</script>
+</body></html>
