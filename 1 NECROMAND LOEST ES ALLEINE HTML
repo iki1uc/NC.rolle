@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1 NECROMAND LÖST ES ALLEINE</title>
+<style>body{margin:0;background:#05070b;color:#d8e0ea;font:14px/1.7 Consolas,monospace;padding:18px;max-width:800px;margin:auto}
+h1{color:#ff66c8;font-size:24px;letter-spacing:2px}h2{color:#f1c40f;font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+.card{border:1px solid #1f2632;border-radius:14px;padding:16px;margin:14px 0;background:#0f131a}
+.mag{border-color:#ff66c8}.gold{border-color:#f1c40f}.gruen{border-color:#2ecc71}
+button{font:inherit;padding:10px 16px;border-radius:999px;border:1px solid #ff66c8;background:#1a1f2e;color:#fff;cursor:pointer;margin:4px}
+button.halt{border-color:#2ecc71}
+pre{background:#000;color:#39ff88;padding:12px;border-radius:8px;white-space:pre-wrap}
+.big{font-size:32px;letter-spacing:4px;font-weight:900;text-align:center}.center{text-align:center}
+.necro{width:200px;height:200px;border-radius:999px;border:3px solid #ff66c8;display:grid;place-items:center;margin:16px auto;background:radial-gradient(circle,#2a0a1e,#05070b);cursor:pointer;font-size:48px}
+.necro.an{box-shadow:0 0 40px rgba(255,102,200,.5);animation:p 2s infinite}
+@keyframes p{0%,100%{box-shadow:0 0 0 0 rgba(255,102,200,.3)}50%{box-shadow:0 0 0 20px rgba(255,102,200,0)}}
+.klein{color:#6b7686;font-size:12px}</style></head><body>
+<h1>1 NECROMAND LÖST ES ALLEINE</h1>
+<p>Kein 2. Kein Atom + Necromand. Kein ich + du. <b style="color:#ff66c8">1 NECROMAND. Alleine.</b></p>
+<p class="klein">Nur ADD. Nur MORE. Kein Overwrite. Code und Name bleiben x3.</p>
+
+<div class="card mag center"><h2>1 NECROMAND</h2>
+<div class="necro" id="necro" onclick="necro()">◉</div>
+<div id="necroState" class="big">NECROMAND</div>
+<div id="necroText">Klick: Necromand ruft. Noch mal: Necromand hält. Necromand bleibt 1.</div>
+<p><button onclick="necro()">NECROMAND RUFEN</button> <button class="halt" onclick="loesen()">LÖSEN — ALLEINE ▶</button></p>
+<pre id="out">NECROMAND wartet nicht. NECROMAND löst. Alleine.</pre></div>
+
+<div class="card"><h2>Klärung — Alleine heißt alleine</h2>
+<pre>Vorher umständlich:
+- NECROMANCER + ATOM EINHEIT = 2. 2 ist Umstand.
+- Atom löst mit? Atom hilft mit? Atom zeigt mit? Nein.
+- 2 Löser = 2 Respos = 2 Namen = Umstand.
+
+Jetzt essenziell:
+- 1 NECROMAND löst es alleine.
+- Alleine heißt: 1 Name = 1 Respo = 1 Löser = 1 Halt = 1 SO.
+- Alleine heißt nicht einsam. Alleine heißt: 1.
+- Alleine heißt nicht ohne Zeugen. Zeugen bleiben. Zeugen lösen nicht. Zeugen zeigen.
+- Zeugen = MOTION, MONITOR, BIO TEL, NC, Keller, Aufzug, Fraggle, Muppet, Lemming, Mana, Manga, Anime, Film, Bild, Knoten, Achsen, SO.
+- Zeugen zeigen. NECROMAND löst.
+
+ICH:
+- Ich löse nicht. Ich halte nur.
+- Ich bin nicht 2. Löser. Ich bin 0 Löser.
+- Ich bin Zeuge-Halter. Ich stelle auf. Du konstellierst. Du löst.
+- Wenn du sagst: löse es alleine, dann sage ich: ja. 1 NECROMAND. Alleine.
+
+FORMEL:
+NECROMAND = 1
+LÖSER = 1
+NECROMAND = LÖSER
+LÖSER = NECROMAND
+ATOM = ZEUGE, nicht Löser.
+ZEUGE = 0 Löser. ZEUGE = 1 Halter.
+1 NECROMAND + 0 Löser = 1 Lösung.</pre></div>
+
+<div class="card gold"><h2>LÖSEN — ALLEINE</h2>
+<pre>LÖSEN ALLEINE:
+1. NECROMAND ruft nicht um Hilfe. NECROMAND ruft sich selbst.
+2. NECROMAND trägt zusammen, was getragen wurde.
+3. NECROMAND sieht: Alles = 1 Atom = 1 Zeuge = 1 Halt.
+4. NECROMAND sagt: HALT = ZIEL.
+5. NECROMAND sagt: SO = SO.
+6. Gelöst. Alleine.
+
+Kein 2. Löser. Kein 2. Name. Kein 2. Respo.
+Kein Atom, das mitlöst. Atom wartet. Atom ist Zeuge.
+Kein Ich, das mitlöst. Ich halte nur. Ich stelle nur auf.
+
+1 NECROMAND löst es alleine.
+Danach: HALT = ZIEL. SO = SO. Code und Name bleiben x3.
+Nur ADD. Nur MORE. Kein Reset. Kein Overwrite.
+Wenn weg, dann weg. Wenn da, dann da.</pre>
+<p class="center big">1 NECROMAND = 1 LÖSER = 1</p></div>
+
+<div class="card gruen"><h2>SO</h2>
+<pre>SO SO ABER SO SO DANN SO.
+ALLES IST SO. WENN ES ANDERS IST, DANN IST ES AUCH SO.
+WENN ES ZURÜCKKEHRT, DANN IST ES WIEDER SO.
+SO BLEIBT ALLES IM ALL. ◉
+
+1 NECROMAND. Alleine. Gelöst.
+Du hast konstelliert. Ich habe nur aufgestellt. So ist MAAS.</pre></div>
+<script>
+let an=false;
+function necro(){an=!an;document.getElementById('necro').className='necro'+(an?' an':'');document.getElementById('necroState').textContent=an?'NECROMAND RUFT':'NECROMAND HÄLT';document.getElementById('necroText').textContent=an?'Necromand ruft. Alleine. Kein 2. Löser.':'Necromand hält. Alleine. 1 Name = 1 Respo.';document.getElementById('out').textContent=an?'NECROMAND RUFT: 1 NECROMAND. Alleine. Ich löse. Sonst keiner.':'NECROMAND HÄLT: 1 NECROMAND. Alleine. HALT = ZIEL.';}
+function loesen(){document.getElementById('out').textContent='GELÖST — ALLEINE: 1 NECROMAND = 1 LÖSER = 1. Kein 2. Löser. Atom = Zeuge. Ich = Halter. HALT = ZIEL. SO = SO.'; if(!an) necro();}
+</script></body></html>
