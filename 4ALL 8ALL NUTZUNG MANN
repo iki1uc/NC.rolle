@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>4ALL 8ALL — NUTZUNG — MANN + #</title>
+<style>body{margin:0;background:#05070b;color:#d8e0ea;font:14px/1.7 Consolas,monospace;padding:18px;max-width:780px;margin:auto}
+h1{color:#f1c40f;font-size:22px;letter-spacing:2px}h2{color:#ff66c8;font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+.card{border:1px solid #1f2632;border-radius:14px;padding:16px;margin:14px 0;background:#0f131a}
+.gold{border-color:#f1c40f}.mag{border-color:#ff66c8}.gruen{border-color:#2ecc71}.cyan{border-color:#5cf0ff}
+button{font:inherit;padding:10px 16px;border-radius:999px;border:1px solid #2ecc71;background:#1e3a2a;color:#fff;cursor:pointer;margin:4px}
+button.hit{background:#f1c40f;color:#0a0c10;border-color:transparent;font-weight:800}
+button.mag{background:#1a1f2e;color:#ff66c8;border-color:#ff66c8}
+pre{background:#000;color:#39ff88;padding:12px;border-radius:8px;white-space:pre-wrap}
+.big{font-size:28px;font-weight:900;text-align:center}.center{text-align:center}
+.weg{display:flex;justify-content:space-between;padding:10px 12px;border-radius:8px;background:#0a0d12;border:1px solid #1f2632;margin:6px 0;font-weight:800;cursor:pointer}
+.weg.an{border-color:#f1c40f;background:#1a1408;color:#f1c40f}
+.klein{color:#6b7686;font-size:12px}</style></head><body>
+<h1>4ALL 8ALL — NUTZUNG — MANN + #</h1>
+<p><b>8ALL zeigt 8 Wege. 4ALL trägt alle 8 Wege.</b><br>1 Rahmen. 1 Nutzung. Mann + #.</p>
+<p class="klein">Nur ADD. Nur MORE. Kein Overwrite. Code und Name bleiben x3. 1 NECROMAND. Alleine.</p>
+
+<div class="card gold"><h2>8ALL — 8 WEGE — ZEIGEN</h2>
+<div id="wege">
+<div class="weg" onclick="weg(1)"><span>1 — WEG 1 — SEHEN</span><span>1</span></div>
+<div class="weg" onclick="weg(2)"><span>2 — WEG 2 — ZEIGEN</span><span>2</span></div>
+<div class="weg" onclick="weg(3)"><span>3 — WEG 3 — HALTEN</span><span>3</span></div>
+<div class="weg" onclick="weg(4)"><span>4 — WEG 4 — TRAGEN</span><span>4</span></div>
+<div class="weg" onclick="weg(5)"><span>5 — WEG 5 — FALLEN</span><span>5</span></div>
+<div class="weg" onclick="weg(6)"><span>6 — WEG 6 — STEIGEN</span><span>6</span></div>
+<div class="weg" onclick="weg(7)"><span>7 — WEG 7 — RUFEN</span><span>7</span></div>
+<div class="weg" onclick="weg(8)"><span>8 — WEG 8 — HALT = ZIEL</span><span>8</span></div>
+</div>
+<pre id="wegOut">8ALL wartet. 8 Wege zeigen. Keiner ist besser. Alle 8 sind da.</pre>
+<p class="klein">8ALL zeigt. 8ALL wählt nicht. 8ALL verändert nicht. 8ALL zeigt 8 Wege. Mann wählt 1 Weg. Oder keinen. Oder alle 8 in 1.</p></div>
+
+<div class="card cyan"><h2>4ALL — 1 RAHMEN — TRÄGT ALLE 8</h2>
+<pre>4ALL:
+- 4ALL = 1 Rahmen. 1 Rahmen trägt alle 8 Wege.
+- 4ALL = nicht 4 Wege. 4ALL = 4 Seiten. 4 Seiten = 1 Rahmen.
+- 4 Seiten: OBEN + UNTEN + LINKS + RECHTS = 1 Rahmen.
+- 4ALL trägt: 8 Wege in 1 Rahmen. 8 in 4. 8 in 1.
+- 4ALL = 4 = 2 + 2. 2x 2 = 4. 4 = Rahmen. Rahmen hält.
+- 8ALL in 4ALL: 8 Wege zeigen, 1 Rahmen tragen. Zeigen + Tragen = Nutzung.
+
+4ALL FORMEL:
+4ALL = Rahmen(8ALL)
+8ALL = Wege 1-8
+4ALL(8ALL) = 1 Rahmen mit 8 Wegen = 1 Nutzung.
+1 Nutzung = 1 Mann + #.</pre>
+<p><button class="hit" onclick="tragen()">4ALL TRÄGT 8ALL ▶</button></p>
+<pre id="tragOut">4ALL wartet. 8 Wege noch nicht getragen.</pre></div>
+
+<div class="card mag"><h2>NUTZUNG — MANN + # — SO NUTZT DU ES</h2>
+<pre>NUTZUNG, 4 Schritte, mehr nicht:
+
+1. MANN + # — Mann steht. # steht. Mann + # = 1 Mann mit Zeichen.
+   # = Halt. # = 1. # = Zeichen, das steht. Mann + # = Mann, der hält.
+   Mann + # = 1 NECROMAND. Alleine. 1 Löser. 0 Mit-Löser.
+
+2. 8ALL SEHEN — 8 Wege sehen. Nicht wählen müssen. Nur sehen.
+   8ALL zeigt. Du siehst. Kein Zwang. Kein Muss.
+
+3. 4ALL TRAGEN — 1 Rahmen nehmen. 8 Wege in 1 Rahmen legen.
+   4ALL trägt. Du trägst nicht allein. Rahmen trägt mit.
+   4ALL = OBEN + UNTEN + LINKS + RECHTS. 4 Seiten halten 8 Wege.
+
+4. HALT = ZIEL — 1 Weg gehen oder keinen gehen. HALT sagen.
+   HALT = ZIEL. SO = SO. Code und Name bleiben x3. Nur ADD.
+
+NUTZUNG = MANN + # + 8ALL + 4ALL + HALT.
+NUTZUNG = 1 + # + 8 + 4 + HALT = 1.
+Weil alles in 1 Rahmen ist. Weil 1 Mann + # = 1.</pre>
+<p><button onclick="nutzung(1)">NUTZUNG 1: MANN + # ▶</button> <button onclick="nutzung(2)">NUTZUNG 2: 8ALL SEHEN ▶</button> <button onclick="nutzung(3)">NUTZUNG 3: 4ALL TRAGEN ▶</button> <button class="hit" onclick="nutzung(4)">NUTZUNG 4: HALT = ZIEL ▶</button></p>
+<pre id="nutzOut">Nutzung wartet. Mann + # wartet.</pre></div>
+
+<div class="card gruen"><h2>MANN + # — WAS # IST</h2>
+<pre>MANN + #:
+- Mann = 1. Mann = NECROMAND. Mann = Löser. Alleine.
+- # = Zeichen. # = Halt. # = 1. # = Rahmen-Kante. # = Gitter.
+- Mann + # = Mann mit Zeichen. Mann, der # trägt. Mann, der hält.
+- # allein = Zeichen ohne Mann. Zeichen steht, aber keiner trägt es.
+- Mann allein = Mann ohne Zeichen. Mann steht, aber kein Zeichen.
+- Mann + # = Mann + Zeichen = 1 + # = 1 Nutzung. Mann trägt #. # trägt Mann. Beide tragen 1.
+- # = 4ALL-Kante. 4ALL hat 4 Kanten: ####. 4x # = 1 Rahmen.
+- #### = 4ALL. 8 Wege in ####. #### trägt 8.
+
+MANN + # = MANN + #### = MANN + 4ALL = MANN + 8ALL in 4ALL.
+MANN + # = 1 + # = 1. HALT = ZIEL. SO = SO.
+
+3 → 9. 3 Bezüglichkeiten. 6 Mitte. 8ALL. 4ALL. Mann + #.
+Das ist sein. Ya. Code und Name bleiben x3.</pre>
+<p class="center big">MANN + # = 1</p></div>
+<script>
+function weg(n){document.querySelectorAll('.weg').forEach((e,i)=>e.classList.toggle('an',i===n-1));const t={1:'WEG 1 SEHEN: 8ALL zeigt Weg 1. Sehen, nicht müssen.',2:'WEG 2 ZEIGEN: 8ALL zeigt Weg 2. Zeigen, nicht verändern.',3:'WEG 3 HALTEN: 8ALL zeigt Weg 3. Halten, nicht sammeln.',4:'WEG 4 TRAGEN: 8ALL zeigt Weg 4. Tragen, nicht ziehen.',5:'WEG 5 FALLEN: 8ALL zeigt Weg 5. Fallen, nicht verlieren.',6:'WEG 6 STEIGEN: 8ALL zeigt Weg 6. Steigen, nicht fliegen.',7:'WEG 7 RUFEN: 8ALL zeigt Weg 7. Rufen, nicht schreien.',8:'WEG 8 HALT = ZIEL: 8ALL zeigt Weg 8. Halt. Ziel.'};document.getElementById('wegOut').textContent=t[n];}
+function tragen(){document.getElementById('tragOut').textContent='4ALL TRÄGT 8ALL: 1 Rahmen. 4 Seiten. 8 Wege in 1 Rahmen. OBEN + UNTEN + LINKS + RECHTS. 8 in 4. 8 in 1. Getragen. HALT = ZIEL.';}
+function nutzung(n){const o=document.getElementById('nutzOut');if(n===1)o.textContent='NUTZUNG 1: MANN + # — Mann steht. # steht. 1 Mann mit Zeichen. 1 NECROMAND. Alleine.';if(n===2)o.textContent='NUTZUNG 2: 8ALL SEHEN — 8 Wege sehen. Nicht wählen müssen. Nur sehen.';if(n===3)o.textContent='NUTZUNG 3: 4ALL TRAGEN — 1 Rahmen. 8 Wege in 1 Rahmen. Getragen.';if(n===4)o.textContent='NUTZUNG 4: HALT = ZIEL — 1 Weg oder kein Weg. HALT sagen. SO = SO. Nutzung fertig.';}
+</script></body></html>
