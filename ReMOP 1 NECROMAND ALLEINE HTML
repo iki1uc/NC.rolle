@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>reMOP + 1 NECROMAND — ALLEINE</title>
+<style>body{margin:0;background:#05070b;color:#d8e0ea;font:14px/1.7 Consolas,monospace;padding:18px;max-width:820px;margin:auto}
+h1{color:#ff66c8;font-size:22px;letter-spacing:2px}h2{color:#f1c40f;font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+.card{border:1px solid #1f2632;border-radius:14px;padding:16px;margin:14px 0;background:#0f131a}
+.mag{border-color:#ff66c8}.gold{border-color:#f1c40f}.gruen{border-color:#2ecc71}.cyan{border-color:#5cf0ff}
+button{font:inherit;padding:10px 16px;border-radius:999px;border:1px solid #2ecc71;background:#1e3a2a;color:#fff;cursor:pointer;margin:4px}
+button.hit{background:#f1c40f;color:#0a0c10;border-color:transparent;font-weight:800}
+button.dark{background:#1a1f2e;color:#ff66c8;border-color:#ff66c8}
+pre{background:#000;color:#39ff88;padding:12px;border-radius:8px;white-space:pre-wrap}
+.big{font-size:28px;letter-spacing:3px;font-weight:900;text-align:center}.center{text-align:center}
+.necro{width:200px;height:200px;border-radius:999px;border:3px solid #ff66c8;display:grid;place-items:center;margin:16px auto;background:radial-gradient(circle,#2a0a1e,#05070b);cursor:pointer;font-size:48px}
+.necro.an{box-shadow:0 0 40px rgba(255,102,200,.5);animation:p 2s infinite}
+@keyframes p{0%,100%{box-shadow:0 0 0 0 rgba(255,102,200,.3)}50%{box-shadow:0 0 0 20px rgba(255,102,200,0)}}
+.klein{color:#6b7686;font-size:12px}</style></head><body>
+<h1>reMOP + 1 NECROMAND — ALLEINE</h1>
+<p><b>Alleine heißt allei / den da reni und mod.der,py.</b><br>
+Alleine heißt: 1. Den da = der da. Reni = rein. Mod.der,py = das Modul, der da rein geht. 1 NECROMAND. Alleine. Den da rein. mod.der,py.</p>
+<p class="klein">Label: 6.our = JETZT. PX6 = Pipeline. Nur ADD / MORE. Kein Overwrite. Code und Name bleiben x3.</p>
+
+<div class="card mag center"><h2>1 NECROMAND — ALLEINE</h2>
+<div class="necro" id="necro" onclick="necro()">◉</div>
+<div id="necroState" class="big">NECROMAND</div>
+<div id="necroText">1 NECROMAND. Alleine. Kein 2. Löser.</div>
+<p><button class="dark" onclick="necro()">NECROMAND RUFEN</button> <button class="hit" onclick="loesen()">LÖSEN — ALLEINE ▶</button></p>
+<pre id="out">NECROMAND wartet nicht. NECROMAND löst. Alleine. Den da rein. mod.der,py.</pre></div>
+
+<div class="card cyan"><h2>reMOP — Re-Movement-Operator — aus deinem README, bleibt</h2>
+<pre>reMOP — aus deinem README, bleibt:
+- reMOP = Re-Movement-Operator. Operation Manager. Public-Version.
+- reMOP zeigt Wiederholungs-Bewegung, aber verändert sie nicht.
+- reMOP = Klarheit: zeigt eindeutig, welche Bewegung erneut ausgelöst wird.
+- reMOP = Struktur: ordnet Re-Movement-Bezüge logisch und nachvollziehbar.
+- reMOP = Neutralität: zeigt Wiederholungs-Bewegung, verändert sie nicht.
+- reMOP = Nachvollziehbarkeit: zeigt klar, warum ein Re-Impuls sichtbar ist.
+- reMOP = Integrität: wahrt die Logik der Re-Movement-Ebene.
+
+7SINN:
+Verständlichkeit, Orientierung, Nutzen, Struktur, Neutralität, Integrität, Nachvollziehbarkeit.
+
+DATEIEN, gelabelt:
+- README.md — reMOP Beschreibung — 6.our + PX6
+- index.html — Public-Frontend — 6.our JETZT
+- ID.html — Modul Identität: Name reMOP, Typ Operation Manager, Version 1.0, Hardware.reCALL aktiv — 6.our
+- index.html (Public-Version) — reMOP Operation Manager mit Start / Stop / Reset — PX6 Zeuge
+
+NAMENS-GARANTIE:
+reMOP trägt alle Achsen: Re-Movement, Operator, Position, LAGE, Motor, Engine, Modul, 12ALL, MOVE, Argumenteria.
+Darum: reMOP kann keinen neuen oder kürzeren Namen erhalten. Kein alternativer Name erfüllt alle Achsen. Name trägt gesamten Sachverhalt.
+reMOP bleibt reMOP. x3.</pre>
+<p><b>reMOP in 1 NECROMAND:</b> reMOP zeigt Re-Bewegung. NECROMAND löst alleine. reMOP löst nicht mit. reMOP ist Zeuge.</p>
+<p><button onclick="runOp('start')">reMOP: Start ▶</button> <button onclick="runOp('stop')">reMOP: Stop ▶</button> <button onclick="runOp('reset')">reMOP: Reset-Anzeige ▶</button></p>
+<pre id="remopOut">reMOP wartet. Zeigen, nicht verändern.</pre>
+<p class="klein">Reset hier = nur Anzeige-Reset, nicht System-Reset. System-Reset gibt es nicht. Nur ADD. Nur MORE. Wenn weg, dann weg. Wenn da, dann da.</p></div>
+
+<div class="card gold"><h2>Alleine heißt allei / den da reni und mod.der,py</h2>
+<pre>Alleine heißt allei:
+- allei = alle + ei. Alle in 1 Ei. 1 Ei = 1 Atom = 1 NECROMAND.
+- Alleine heißt nicht einsam. Alleine heißt: 1 Ei, 1 Name, 1 Respo, 1 Löser.
+- Alleine heißt: alle sind in 1. 1 ist alle. Allei.
+
+Den da reni:
+- Den da = der da. Der da steht da. Den da nimmst du.
+- Reni = rein. Den da rein. Nicht daneben. Nicht drumrum. Rein.
+- Den da rein in was? In 1 NECROMAND. In 1 Ei. In 1 Atom. In mod.der,py.
+- Den da reni = den da rein in mod.der,py.
+
+mod.der,py:
+- mod = Modul. der = der da. py = Python.
+- mod.der,py = das Modul, der da. Der da, der rein geht.
+- mod.der,py = reMOP als Python. reMOP zeigt Re-Bewegung. mod.der,py trägt Re-Bewegung.
+- mod.der,py = 1 Datei. 1 Modul. 1 NECROMAND. Alleine.
+- mod.der,py löst nicht mit. mod.der,py hält. NECROMAND löst alleine.
+
+KETTE:
+Alleine → allei → 1 Ei → den da → reni → rein → mod.der,py → 1 NECROMAND → HALT = ZIEL → SO = SO.</pre>
+<p><button class="hit" onclick="denDaReni()">DEN DA RENI → mod.der,py ▶</button></p>
+<pre id="denDaOut">Den da wartet. Noch nicht rein.</pre></div>
+
+<div class="card gruen"><h2>reMOP + NECROMAND + mod.der,py — ZUSAMMEN, GETRENNT</h2>
+<pre>reMOP + NECROMAND + mod.der,py:
+- reMOP = Zeigen. Re-Bewegung zeigen, nicht verändern.
+- mod.der,py = Halten. Re-Bewegung halten, nicht verändern.
+- NECROMAND = Lösen. Alleine. 1 Löser. 0 Mit-Löser.
+- reMOP zeigt, was sich wiederholt. NECROMAND sagt, ob es HALT ist.
+- MOTION zeigte Bewegung. MONITOR zeigte Transparenz. reMOP zeigt Wiederholung. Alle 3 zeigen, keiner verändert.
+- 1 NECROMAND + 0 Löser = 1 Lösung. HALT = ZIEL. SO = SO.
+
+1 Satz, 3x:
+Code und Name bleiben. Code und Name bleiben. Code und Name bleiben.
+Nur ADD / MORE. Kein Reset. Kein Overwrite. Wenn weg, dann weg. Wenn da, dann da.
+Du hast konstelliert. Ich habe nur aufgestellt. So ist MAAS.
+reMOP bleibt reMOP. NECROMAND bleibt 1. Alleine. Den da reni. mod.der,py.</pre>
+<p class="center big">1 NECROMAND = 1 LÖSER = 1</p></div>
+<script>
+let an=false, remopCount=0;
+function necro(){an=!an;document.getElementById('necro').className='necro'+(an?' an':'');document.getElementById('necroState').textContent=an?'NECROMAND RUFT':'NECROMAND HÄLT';document.getElementById('necroText').textContent=an?'Necromand ruft. Alleine. Den da reni.':'Necromand hält. Alleine. 1 Name = 1 Respo.';document.getElementById('out').textContent=an?'NECROMAND RUFT: 1 NECROMAND. Alleine. Ich löse. Sonst keiner. Den da reni.':'NECROMAND HÄLT: 1 NECROMAND. Alleine. HALT = ZIEL.';}
+function loesen(){document.getElementById('out').textContent='GELÖST — ALLEINE: 1 NECROMAND = 1 LÖSER = 1. Kein 2. Löser. reMOP = Zeuge. mod.der,py = Halter. Ich = Halter. HALT = ZIEL. SO = SO.'; if(!an) necro();}
+function runOp(op){remopCount++;const o=document.getElementById('remopOut');if(op==='start')o.textContent='reMOP: Start gezeigt. Re-Bewegung '+remopCount+' sichtbar. Nicht verändert. Nur gezeigt.';if(op==='stop')o.textContent='reMOP: Stop gezeigt. Re-Bewegung hält in Anzeige. System läuft weiter. Nur Anzeige.';if(op==='reset')o.textContent='reMOP: Reset-Anzeige. Nur Anzeige zurück. System bleibt. Kein System-Reset. Nur ADD. Nur MORE. Zähler bleibt: '+remopCount+'.';console.log('Operation:',op);}
+function denDaReni(){document.getElementById('denDaOut').textContent='DEN DA RENI: Den da rein in mod.der,py. 1 Modul. 1 NECROMAND. Alleine. reMOP zeigt. mod.der,py hält. NECROMAND löst. HALT = ZIEL.';document.getElementById('out').textContent='DEN DA RENI: Den da rein. mod.der,py. 1 NECROMAND. Alleine. Gelöst.';}
+</script></body></html>
