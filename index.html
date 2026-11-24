@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MASTER · PIPELINE · EYE BRAIN · QI 404</title>
+<style>
+:root{color-scheme:dark;--bg:#070b14;--p:#0e1520;--l:#263548;--t:#dce8f2;--m:#8a9bad;--c:#5cf0ff;--g:#65f0b0;--gold:#ffd166;--r:#ff6b6b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:14px/1.5 system-ui,Segoe UI,sans-serif}
+header{padding:12px 16px;border-bottom:1px solid var(--l);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+header strong{color:var(--c);letter-spacing:1px}small{color:var(--m)}
+button{min-height:36px;padding:7px 12px;border:1px solid var(--l);border-radius:7px;background:#111c2a;color:var(--t);cursor:pointer}
+button.on{border-color:var(--g);color:var(--g)}button.danger{border-color:var(--r);color:var(--r)}
+main{max-width:1100px;margin:0 auto;padding:14px;display:grid;gap:14px}
+.card{background:var(--p);border:1px solid var(--l);border-radius:10px;padding:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+pre{background:#080e18;border:1px solid var(--l);border-radius:7px;padding:10px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,Consolas,monospace;color:#aef}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}.tabs button.on{background:var(--c);color:#07140d;border-color:var(--c)}
+.kv{display:grid;grid-template-columns:90px 1fr;gap:6px 10px}.kv dt{color:var(--m)}.kv dd{margin:0}
+canvas{width:100%;height:280px;background:#05080f;border:1px solid var(--l);border-radius:8px;display:block}
+.badge{display:inline-block;padding:2px 8px;border:1px solid var(--l);border-radius:99px;font-size:12px;color:var(--m)}
+.halt{color:#ffd166;font-weight:700}
+</style></head><body>
+<header><div><strong>MASTER · PIPELINE · EYE BRAIN</strong><br><small>SCAN → OCR → NET/NC → OUTPUT/OI · P0 wake · P1 melt · P2 merge · P4 start · Pe finalize · QI 404 = ehrlicher Null-Fall</small></div>
+<div><button id="eyeBtn">EYE: ZU</button><button id="brainBtn">BRAIN: ZU</button><button id="haltBtn" class="danger">HALT</button></div></header>
+<main>
+<section class="card"><h2 style="margin:0 0 6px;color:var(--g)">PENTAGRAMM · 5 PUNKTE · 1 ACHSE</h2>
+<p style="margin:0 0 10px;color:var(--m)">Nicht 5 Systeme. 1 Achse, 5 Haltestellen. Klick einen Punkt oder einen Button unten. EYE = sehen, BRAIN = prüfen. Beides aus = nur Anzeige, kein Lauf.</p>
+<canvas id="penta" width="1000" height="280"></canvas>
+<div class="tabs" style="margin-top:10px"><button data-p="P0">P0 wake</button><button data-p="P1">P1 melt</button><button data-p="P2">P2 merge</button><button data-p="P4">P4 start</button><button data-p="Pe">Pe finalize</button><button data-p="QI">QI scan</button><button id="runAll">▶ ALLE 1× DURCHLAUFEN</button><button id="resetBtn">RESET ZÄHLER</button></div>
+<div class="kv" style="margin-top:10px"><dt>STATUS</dt><dd id="status">Bereit · HALT aus · nichts läuft automatisch</dd><dt>ZÄHLER</dt><dd id="counts">P0 0 · P1 0 · P2 0 · P4 0 · Pe 0 · Schritte 0</dd><dt>LETZTER</dt><dd id="last">—</dd></div></section>
+
+<section class="grid2">
+<section class="card"><h3 style="margin-top:0;color:var(--c)">QI · 404 · EHRLICHER FALL</h3>
+<p style="color:var(--m)">404 heisst hier: nichts da. Kein Fake-100%. QI.scan gibt zurück was wirklich gesetzt ist, sonst false.</p>
+<div class="tabs"><button id="qi404">QI · 404</button><button id="qiCore">QI · CORE</button><button id="qiRespo">QI · RESPO 360</button></div><pre id="qiOut">Bereit…</pre></section>
+<section class="card"><h3 style="margin-top:0;color:var(--c)">PIPELINE1–4 · GRUNDACHSE</h3>
+<div class="tabs"><button data-pipe="1">PIPELINE1 SCAN</button><button data-pipe="2">PIPELINE2 OCR</button><button data-pipe="3">PIPELINE3 NET/NC</button><button data-pipe="4">PIPELINE4 OUTPUT/OI</button></div>
+<pre id="pipeOut">Wähle eine PIPELINE-Stufe. Axiome: K(t)=1/(1-t) · Φ(t)=φ∞·K(t) · io=+Δx·K(t) · oi=-Δx·K(t) · TRANS-WARB: 3 → CUBIT → 4 → OI</pre>
+<p style="color:var(--m);font-size:13px">Kompatibel: IO/OI · TRANS-WARB · WARB KANAL · Highway · Slalom · Axiom-Dreieck-6 · Modul-IO-8. Das ist eine Liste, kein Nachweis.</p></section>
+</section>
+
+<section class="card"><h3 style="margin-top:0;color:var(--gold)">SICHTEN · NICHT 6 SYSTEME</h3>
+<div class="tabs"><button data-view="org">ORG · NI · ZE</button><button data-view="pq">PQ.HOME</button><button data-view="octa">OCTA.HUB</button><button data-view="vor">VOR · RÜCK</button><button data-view="meta">META · TIEFE · MYSTERY</button><button data-view="rom">ROM.E · RASTER</button></div>
+<pre id="viewOut">Wähle eine Sicht.</pre>
+<p style="color:var(--m);font-size:13px">org.py / pq.home.py / octa.hub.py / vor.rueck.bauen.py / meta.tiefe.mystery.py sind in diesem Master als <b>Anzeige + Zählung</b> abgebildet, nicht als Datei-Löscher. Kein Script hier verschiebt oder löscht Dateien. Löschen nur nach deinem JA, ausserhalb.</p></section>
+
+<section class="card"><h3 style="margin-top:0">PROTOKOLL · LOKAL · KEIN VERSAND</h3><pre id="log">[INIT] MASTER geladen · QI 1× · P0/P1/P2/P4/Pe je 1× · kein Auto-Start
+[INIT] HALT = ZIEL · HALT blockt, löscht nicht</pre></section>
+<section class="card"><h3 style="margin-top:0;color:var(--m)">ZEUGNIS · WAS NICHT BEHAUPTET WIRD</h3><p style="color:var(--m)">Diese Datei beweist kein CO2, keine Energie, keine Messung. Sie zählt Klicks, zeigt Zustände und hält offen, was offen ist: <span class="halt">729 → 3 nicht erklärt · 1+2+3 = 6, nicht 9 · Mystery gehalten, nicht gelöst.</span> PIPELINE1-Quelle: Q1 · Zahl Z1 · Vektor IX · Funktion IO · Norm RDY · Mechanik M1 · Rel R0 · Pos P0 · Matrix 3-6-9.</p></section>
+</main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+let halt=false, eye=false, brain=false;
+let counts={P0:0,P1:0,P2:0,P4:0,Pe:0,steps:0};
+let active="P0";
+const CORE={id:"CORE",core:true,fn:true,stable:true,ready:true,respo360:{id:"RESPO",active:true,level:360}};
+const QI={scan(o){return{id:o.id||"CORE",core:!!o.core,fn:!!o.fn,stable:!!o.stable,ready:!!o.ready,respo:!!o.respo360,time:Date.now()}}};
+const P={P0:{run:c=>({id:"P0",action:"wake",core:c})},P1:{run:c=>({id:"P1",action:"melt",core:c})},P2:{run:c=>({id:"P2",action:"merge",core:c})},P4:{run:c=>({id:"P4",action:"start",core:c})},Pe:{run:c=>({id:"Pe",action:"finalize",core:c})}};
+function log(m){$("log").textContent+="\n"+new Date().toLocaleTimeString()+" · "+m}
+function upd(){ $("counts").textContent=`P0 ${counts.P0} · P1 ${counts.P1} · P2 ${counts.P2} · P4 ${counts.P4} · Pe ${counts.Pe} · Schritte ${counts.steps}`;
+ $("status").textContent=(halt?"HALT AKTIV · blockt Lauf · ":"")+(eye?"EYE offen · ":"EYE zu · ")+(brain?"BRAIN offen · ":"BRAIN zu · ""); draw(); }
+function run(name){ if(halt){log("HALT blockt "+name);return} if(!eye&&!brain){log(name+" gezeigt, nicht gelaufen — EYE+BRAIN zu");$("last").textContent=name+" · nur Anzeige";return}
+ const r=P[name].run(CORE); counts[name]++; counts.steps++; active=name; $("last").textContent=JSON.stringify(r); log(name+" · "+r.action+" · "+counts[name]); upd(); }
+document.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{ if(b.dataset.p==="QI"){ $("qiOut").textContent=JSON.stringify(QI.scan(CORE),null,2); log("QI · CORE"); return;} run(b.dataset.p);});
+$("runAll").onclick=()=>{ if(halt){log("HALT blockt Durchlauf");return} ["P0","P1","P2","P4","Pe"].forEach(run); log("DURCHLAUF 1× fertig"); };
+$("resetBtn").onclick=()=>{counts={P0:0,P1:0,P2:0,P4:0,Pe:0,steps:0};$("last").textContent="—";log("RESET Zähler");upd()};
+$("qi404").onclick=()=>{ $("qiOut").textContent="QI · 404\n"+JSON.stringify(QI.scan({id:"404",core:false,fn:false,stable:false,ready:false}),null,2); log("QI · 404 · ehrlich: alles false"); };
+$("qiCore").onclick=()=>{ $("qiOut").textContent="QI · MASTER-KERN\n"+JSON.stringify(QI.scan(CORE),null,2); log("QI · CORE"); };
+$("qiRespo").onclick=()=>{ $("qiOut").textContent="QI · RESPO\n"+JSON.stringify(QI.scan(CORE.respo360),null,2); log("QI · RESPO"); };
+const pipes={1:"PIPELINE1 SCAN — Quelle Q1 · Zahl Z1 · Vektor IX · IO · RDY · M1 · R0 · P0\nInput → Quelle → Zahl → Vektor → Norm → Mechanik",2:"PIPELINE2 OCR — Text/Bild → Zeichen → Prüfung. In diesem Master: Anzeige, kein echtes OCR.",3:"PIPELINE3 NET/NC — Verbindung / NC-Achse. In diesem Master: Anzeige, kein Netz.",4:"PIPELINE4 OUTPUT/OI — Ausgabe. In diesem Master: das, was du hier siehst."};
+document.querySelectorAll("[data-pipe]").forEach(b=>b.onclick=()=>{ $("pipeOut").textContent=pipes[b.dataset.pipe]; log("PIPELINE"+b.dataset.pipe); });
+const views={
+org:"ORG · 9 Stationen: PUSH PULL SHIFT FLOW BREAK SPIN RISE DROP ROOT\nNI · 4 Nischen: EDITport 99 EDIT TOR / IMport 9 EVIG rein / EXport 999 NUTZ raus / ID PQ nur PQ\nZE · RUF 9 GEISTER -> 81 lacht\nRESPO: nur wenn 9/9 + 4/4 + 81/81 — sonst FLOW GELB. Hier: Anzeige, kein CSV-Löschen.",
+pq:"PQ.HOME · Z = 9, 99, 999, PQ, HOME, ORT, REAL.PC, INDEX\nFelder 1–81 · KARO 1,9,17,25,33,41,49,57,65,73,81\nTausch: HTML RAUS (Zeugnis) / PY REIN (Stage). Dieses File verschiebt nichts, es meldet nur.",
+octa:"OCTA.HUB · 8 Oktanten: N BIOS 11 · NE VERBUND 22 · E RECALL 33 · SE PEAK 44 · S KAISER_DRACHE 55 · SW RAM 66 · W CALC 77 · NW ROM_SYS 88+99\n8 Tore: EYE_OPEN BRAIN_OPEN SYSTEM_OPEN MAINBOARD_OPEN EVIG_9 TOR_OPEN_99 NUTZ_999 PQ\nNur wenn alle 8 offen: EINSUITE. Sonst NORMALRAUM. Geheim bleibt verborgen ohne EYE.",
+vor:"VOR · RÜCK = 1 Achse, längs\nVOR = CORE, Tab 3, Prüfen / HALT, Summe 6, offen: 729->3 nicht erklärt / 1+2+3=6 nicht 9\nRÜCK = ZEUGNIS, Tab 0, hält: NEUTRAL gelöscht / 0.8.66 gelöscht -> NIE.md / Bank gesprengt\nMITTE 41 · HALT = ZIEL",
+meta:"META = Mirror = TIEFE + MYSTERY\nStapel: 9 -> 81 -> 243 -> 729 -> 3\nDeltas: 9.0 · 3.0 · 3.0 · 0.004167\nLetzter Sprung 729 -> 3, Faktor 0.004167, nicht erklärt, gehalten. Gelöst: false. HALT: GEHALTEN.",
+rom:"ROM.E · home 40 · x 729 · E 40 · EE 40 · idempotent true · dreier 1000000 · E_balanciert ++++\nRunter: 729 243 81 27 9 3 · Rauf: 729\nRaster 55 Felder (0–54): landet auf HOME 33 · hängt vorher 22 · geklemmt 26 · genau 40: 7 · leer 26\nFeld 41 = MITTE, hier klemmt — nicht schönreden."};
+document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{ $("viewOut").textContent=views[b.dataset.view]; log("SICHT "+b.dataset.view); });
+$("eyeBtn").onclick=e=>{eye=!eye;e.target.textContent="EYE: "+(eye?"OFFEN":"ZU");e.target.classList.toggle("on",eye);log("EYE "+(eye?"offen":"zu"));upd()};
+$("brainBtn").onclick=e=>{brain=!brain;e.target.textContent="BRAIN: "+(brain?"OFFEN":"ZU");e.target.classList.toggle("on",brain);log("BRAIN "+(brain?"offen":"zu"));upd()};
+$("haltBtn").onclick=()=>{halt=!halt;$("haltBtn").textContent=halt?"HALT AKTIV — TIPPEN ZUM LÖSEN":"HALT";log(halt?"HALT gesetzt — blockt":"HALT gelöst");upd()};
+const cv=$("penta"),ctx=cv.getContext("2d");
+function draw(){ ctx.clearRect(0,0,1000,280); const cx=500,cy=140,R=110; const pts=[]; for(let i=0;i<5;i++){const a=-Math.PI/2+i*2*Math.PI/5; pts.push([cx+Math.cos(a)*R,cy+Math.sin(a)*R]);}
+ ctx.strokeStyle="#263548";ctx.lineWidth=1; ctx.beginPath(); for(let i=0;i<5;i++){const a=pts[i],b=pts[(i+2)%5];ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);} ctx.stroke();
+ const names=["P0","P1","P2","P4","Pe"]; pts.forEach((p,i)=>{ctx.fillStyle=active===names[i]?"#65f0b0":"#182536";ctx.beginPath();ctx.arc(p[0],p[1],22,0,Math.PI*2);ctx.fill();ctx.fillStyle=active===names[i]?"#07140d":"#dce8f2";ctx.font="bold 13px monospace";ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(names[i],p[0],p[1]);});
+ ctx.fillStyle="#8a9bad";ctx.font="12px monospace";ctx.fillText("MITTE 41",cx,cy); }
+cv.onclick=e=>{ const r=cv.getBoundingClientRect(); const x=(e.clientX-r.left)*1000/r.width, y=(e.clientY-r.top)*280/r.height; const cx=500,cy=140,R=110; const names=["P0","P1","P2","P4","Pe"]; for(let i=0;i<5;i++){const a=-Math.PI/2+i*2*Math.PI/5; const px=cx+Math.cos(a)*R, py=cy+Math.sin(a)*R; if(Math.hypot(x-px,y-py)<30){run(names[i]);return;}} };
+upd();
+</script></body></html>
